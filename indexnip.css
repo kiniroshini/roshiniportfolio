@@ -1,0 +1,389 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+  }
+  .container-fluid{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #FFF;
+  }
+  /* ============= Animation background ========= */
+  .background {
+    background: linear-gradient(132deg, #FC415A, #591BC5, #212335);
+    background-size: 400% 400%;
+    animation: Gradient 15s ease infinite;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    padding:0;
+    margin:0px;
+  }
+  .cube {
+    position: absolute;
+    top: 80vh;
+    left: 45vw;
+    width: 10px;
+    height: 10px;
+    border: solid 1px #D7D4E4;
+    transform-origin: top left;
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    animation: cube 12s ease-in forwards infinite;
+  }
+  .cube:nth-child(2n) {
+    border-color: #FFF ;
+  }
+  .cube:nth-child(2) {
+    animation-delay: 2s;
+    left: 25vw;
+    top: 40vh;
+  }
+  .cube:nth-child(3) {
+    animation-delay: 4s;
+    left: 75vw;
+    top: 50vh;
+  }
+  .cube:nth-child(4) {
+    animation-delay: 6s;
+    left: 90vw;
+    top: 10vh;
+  }
+  .cube:nth-child(5) {
+    animation-delay: 8s;
+    left: 10vw;
+    top: 85vh;
+  }
+  .cube:nth-child(6) {
+    animation-delay: 10s;
+    left: 50vw;
+    top: 10vh;
+  }
+  /* ================= Header ============ */
+  header{
+    position: absolute;
+    top:0%;
+    left: 0%;
+    width:100%;
+    margin: 0;
+    padding: 0;
+  }
+  /* navbar */
+  nav{
+    color: #FFF;
+    float: right;
+    margin:30px 90px;
+  }
+  nav ul{
+    list-style: none;
+  }
+  nav ul li {
+    float: left;
+    transition: .3s;
+  }
+  nav ul li a{
+    text-decoration: none;
+    color: #EFEEF5;
+    transition: .5;
+    font-size: 15px;
+    margin-left:16px;
+  }
+  nav ul li:hover a{
+    text-decoration: none;
+    color: #591BC5;;
+  }
+  nav ul li:hover{
+    height: 45px;
+    padding-top: 30px;
+    margin-top: -30px;
+   background: #EFEEF5;
+    text-decoration: none;
+    transform: skew(15deg);
+  }
+  /* Logo */
+  .logo{
+    width: 35px;
+    height: 35px;
+    background: #EFEEF5;
+    margin: 40px 63px;
+    float: left;
+    transform: rotate(-30deg);
+  }
+  .logo span{
+    color: #591BC5;
+    font-size: 2em;
+    line-height: 1.4;
+    padding-left: 5px;
+    font-weight: bold;
+  }
+  /* Header content & title & button*/
+  .header-content{
+    margin-top:25%;
+    text-align: center;
+    color:  #EFEEF5;
+  }
+  .header-content h1{
+    text-transform: uppercase;
+    font-size: 3em;
+    letter-spacing: 1px;
+  }
+  .header-content p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 20px auto;
+  }
+  .header-content button{
+    width: 140px;
+    margin:20px 10px;
+    color: #591BC5;
+    font-size: 17px;
+    border:1px solid #EFEEF5;
+    font-weight: 500;
+    background: #EFEEF5;
+    border-radius: 20px;
+    padding: 10px;
+    cursor:pointer;
+    transition: .3s;
+  }
+  .header-content button:hover{
+    border-radius: 0;
+  }
+  /* Animate Background*/
+  @keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes cube {
+    from {
+      transform: scale(0) rotate(0deg) translate(-50%, -50%);
+      opacity: 1;
+    }
+    to {
+      transform: scale(20) rotate(960deg) translate(-50%, -50%);
+      opacity: 0;
+    }
+  }
+
+
+
+
+
+
+  @font-face {
+    font-family: Clip;
+    src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+  }
+  
+  body {
+    background-color: #141114;
+    background-image: linear-gradient(335deg, black 23px, transparent 23px),
+      linear-gradient(155deg, black 23px, transparent 23px),
+      linear-gradient(335deg, black 23px, transparent 23px),
+      linear-gradient(155deg, black 23px, transparent 23px);
+    background-size: 58px 58px;
+    background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
+  }
+  
+  .sign {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    background-image: radial-gradient(
+      ellipse 50% 35% at 50% 50%,
+      #6b1839,
+      transparent
+    );
+    transform: translate(-50%, -50%);
+    letter-spacing: 2;
+    left: 50%;
+    top: 80%;
+    font-family: "Clip";
+    text-transform: uppercase;
+    font-size: 6em;
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    animation: shine 2s forwards, flicker 3s infinite;
+  }
+  
+  @keyframes blink {
+    0%,
+    22%,
+    36%,
+    75% {
+      color: #ffe6ff;
+      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+        -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    }
+    28%,
+    33% {
+      color: #ff65bd;
+      text-shadow: none;
+    }
+    82%,
+    97% {
+      color: #ff2483;
+      text-shadow: none;
+    }
+  }
+  
+  .flicker {
+    animation: shine 2s forwards, blink 3s 2s infinite;
+  }
+  
+  .fast-flicker {
+    animation: shine 2s forwards, blink 10s 1s infinite;
+  }
+  
+  @keyframes shine {
+    0% {
+      color: #6b1839;
+      text-shadow: none;
+    }
+    100% {
+      color: #ffe6ff;
+      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+        -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    }
+  }
+  
+  @keyframes flicker {
+    from {
+      opacity: 1;
+    }
+  
+    4% {
+      opacity: 0.9;
+    }
+  
+    6% {
+      opacity: 0.85;
+    }
+  
+    8% {
+      opacity: 0.95;
+    }
+  
+    10% {
+      opacity: 0.9;
+    }
+  
+    11% {
+      opacity: 0.922;
+    }
+  
+    12% {
+      opacity: 0.9;
+    }
+  
+    14% {
+      opacity: 0.95;
+    }
+  
+    16% {
+      opacity: 0.98;
+    }
+  
+    17% {
+      opacity: 0.9;
+    }
+  
+    19% {
+      opacity: 0.93;
+    }
+  
+    20% {
+      opacity: 0.99;
+    }
+  
+    24% {
+      opacity: 1;
+    }
+  
+    26% {
+      opacity: 0.94;
+    }
+  
+    28% {
+      opacity: 0.98;
+    }
+  
+    37% {
+      opacity: 0.93;
+    }
+  
+    38% {
+      opacity: 0.5;
+    }
+  
+    39% {
+      opacity: 0.96;
+    }
+  
+    42% {
+      opacity: 1;
+    }
+  
+    44% {
+      opacity: 0.97;
+    }
+  
+    46% {
+      opacity: 0.94;
+    }
+  
+    56% {
+      opacity: 0.9;
+    }
+  
+    58% {
+      opacity: 0.9;
+    }
+  
+    60% {
+      opacity: 0.99;
+    }
+  
+    68% {
+      opacity: 1;
+    }
+  
+    70% {
+      opacity: 0.9;
+    }
+  
+    72% {
+      opacity: 0.95;
+    }
+  
+    93% {
+      opacity: 0.93;
+    }
+  
+    95% {
+      opacity: 0.95;
+    }
+  
+    97% {
+      opacity: 0.93;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+   
